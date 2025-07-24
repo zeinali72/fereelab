@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Sidebar from "@/components/sidebar";
 
 export const metadata: Metadata = {
   title: "FereeLab - AI Chatbot",
@@ -15,14 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="flex h-screen">
-          {/* Fixed-width sidebar */}
-          <Sidebar />
-          {/* Main content area */}
-          <main className="flex-1 overflow-hidden">
-            {children}
-          </main>
-        </div>
+        {children}
       </body>
     </html>
   );
